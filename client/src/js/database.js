@@ -12,17 +12,8 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
-export const putDb = async (content) => console.error("putDb not implemented");
-
-// TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => console.error("getDb not implemented");
-//
-//--------------------------------------------------
-//-------FROM MINI PROJECT - EDITED
-
-// Post to db
-export const postDb = async (content) => {
+// Accepts content and then POST to db
+export const putDb = async (content) => {
   console.log("Post to the database");
 
   // Connects to the database and version we want to use.
@@ -35,14 +26,16 @@ export const postDb = async (content) => {
   const store = tx.objectStore("edits");
 
   // Pass in the content.
-  const request = store.add({ contact });
+  const request = store.put({ contact });
 
   // Confirmation of request.
   const result = await request;
   console.log("🚀 - data saved to the database", result);
+
+  // console.error("putDb not implemented");
 };
 
-// Get from db
+// GET all content from db
 export const getDb = async () => {
   console.log("GET from the database");
 
@@ -62,28 +55,8 @@ export const getDb = async () => {
   const result = await request;
   console.log("result.value", result);
   return result;
-};
 
-// Delete from db
-export const deleteDb = async (id) => {
-  console.log("DELETE from the database", id);
-
-  // Connects to the database and version we want to use
-  const editsDb = await openDB("edits", 1);
-
-  // New transaction to specify the database and privileges
-  const tx = editsDb.transaction("edits", "readwrite");
-
-  // Open up the object store
-  const store = tx.objectStore("edits");
-
-  // Delete data by id
-  const request = store.delete(id);
-
-  // Confirmation of request
-  const result = await request;
-  console.log("result.value", result);
-  return result?.value;
+  // console.error("getDb not implemented");
 };
 
 initdb();
