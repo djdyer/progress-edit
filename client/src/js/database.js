@@ -14,8 +14,6 @@ const initdb = async () =>
 
 // Accepts content and then POST to db
 export const putDb = async (content) => {
-  console.log("Post to the database");
-
   // Connects to the database and version we want to use.
   const editsDb = await openDB("edits", 1);
 
@@ -26,19 +24,18 @@ export const putDb = async (content) => {
   const store = tx.objectStore("edits");
 
   // Pass in the content.
-  const request = store.put({ contact });
+  const request = store.put({ id: 1, value: content });
 
   // Confirmation of request.
   const result = await request;
-  console.log("🚀 - data saved to the database", result);
 
-  // console.error("putDb not implemented");
+  result
+    ? console.log("🚀 - Data saved to the database", result.value)
+    : console.error("putDb not implemented");
 };
 
 // GET all content from db
 export const getDb = async () => {
-  console.log("GET from the database");
-
   // Connects to the database and version we want to use.
   const editsDb = await openDB("edits", 1);
 
@@ -49,14 +46,16 @@ export const getDb = async () => {
   const store = tx.objectStore("edits");
 
   // Get all data in the database.
-  const request = store.getAll();
+  const request = store.getAll(1);
 
   // Confirmation of request
   const result = await request;
-  console.log("result.value", result);
-  return result;
 
-  // console.error("getDb not implemented");
+  result
+    ? console.log("Data retrieved", result.value)
+    : console.error("getDb not implemented");
+
+  return result;
 };
 
 initdb();
