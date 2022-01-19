@@ -1,5 +1,5 @@
 {
-  "name": "PROG_EDIT_CLIENT",
+  "name": "prog_edit_client",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",

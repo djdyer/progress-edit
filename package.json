@@ -1,5 +1,5 @@
 {
-  "name": "PROG_EDIT_MAIN",
+  "name": "prog_edit_main",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node": "14.x",
     "express": "^4.17.1",
     "if-env": "^1.0.4"
   },
