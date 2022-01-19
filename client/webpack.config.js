@@ -36,7 +36,7 @@ module.exports = () => {
         fingerprints: false,
         inject: true,
         name: "Prog Edit",
-        short_name: "Prog Edit",
+        short_name: "",
         description: "Edit text on the fly, even offline!",
         background_color: "#181818",
         theme_color: "#181818",
