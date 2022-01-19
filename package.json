@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node": "14.x",
+    "node": "^14.18.1",
     "express": "^4.17.1",
     "if-env": "^1.0.4"
   },
