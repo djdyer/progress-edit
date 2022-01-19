@@ -1,5 +1,8 @@
 {
   "name": "prog_edit_client",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
