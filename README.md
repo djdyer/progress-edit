@@ -44,15 +44,14 @@ Must first initialize with the following commands:
 npm i
 
 npm run build
+```
 
 <br />
 
 Application will then run in the command-line with:
 
 ```
-
 npm run dev
-
 ```
 
 <br />
@@ -66,10 +65,8 @@ npm run dev
 
 **Employing the following technology:**
 
-[<img src="./assets/images/node.svg" height="20px">](https://nodejs.org/en/) [<img src="./assets/images/express.svg" height="20px">](https://www.npmjs.com/package/express)
- [<img src="./assets/images/webpack.svg" height="20px">](https://webpack.js.org/)
+[<img src="./assets/images/node.svg" height="20px">](https://nodejs.org/en/) [<img src="./assets/images/express.svg" height="20px">](https://www.npmjs.com/package/express) [<img src="./assets/images/webpack.svg" height="20px">](https://webpack.js.org/)  
 [<img src="./assets/images/indexeddb.svg" height="20px">](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) [<img src="./assets/images/babel.svg" height="20px">](https://babeljs.io/)
-
 
 <br />
 <br />
@@ -87,6 +84,8 @@ Copyright (c) David Dyer [2022]
 
 [![](assets/demo/youtube.png)](https://youtu.be/XG3Ww3qS-2s)
 
+<br />
+
 <img src="./assets/demo/Prog_Edit_Screenshot.png" width = "600">
 
 <br />
@@ -97,7 +96,6 @@ Copyright (c) David Dyer [2022]
 ✅
 
 ```
-
 when opening app in editor, user presented with client-server folder structure.
 
 commanding `npm run dev` from root directory starts backend and serves client.
@@ -128,5 +126,5 @@ deploying to heroku has proper build scripts for webpack.
 <br />
 <br />
 Let's build something!
+
 🛠️
-```
