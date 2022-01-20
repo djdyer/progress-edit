@@ -41,16 +41,18 @@ SO THAT I can reliably retrieve them for later use
 Must first initialize with the following commands:
 
 ```
-...
+npm i
 
-```
+npm run build
 
 <br />
 
 Application will then run in the command-line with:
 
 ```
-...
+
+npm run dev
+
 ```
 
 <br />
@@ -58,15 +60,16 @@ Application will then run in the command-line with:
 
 ## Deployment
 
-Full-stack application deployed to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
-
-[<img src="./assets/images/...png" height="80px">](https://.../)
+[<img src="./assets/images/heroku.png" height="80px">](https://progress-edit.herokuapp.com/)
 
 <br />
 
 **Employing the following technology:**
 
-[<img src="./assets/images/...svg" height="20px">](https://www.npmjs.com/package/express)
+[<img src="./assets/images/node.svg" height="20px">](https://nodejs.org/en/) [<img src="./assets/images/express.svg" height="20px">](https://www.npmjs.com/package/express)
+ [<img src="./assets/images/webpack.svg" height="20px">](https://webpack.js.org/)
+[<img src="./assets/images/indexeddb.svg" height="20px">](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) [<img src="./assets/images/babel.svg" height="20px">](https://babeljs.io/)
+
 
 <br />
 <br />
@@ -82,14 +85,9 @@ Copyright (c) David Dyer [2022]
 
 ## Demo
 
-Demonstrate the app being used in the browser and then installed.
-Demonstrate the app with a manifest file in the browser.
-Demonstrate the app with a registered service worker in the browser.
-Demonstrate the app with a IndexedDB storage named 'jate' in the browser.
+[![](assets/demo/youtube.png)](https://youtu.be/XG3Ww3qS-2s)
 
-[![](assets/demo/...png)](https://youtu.be/...)
-
-<img src="./assets/demo/...png" width = "600">
+<img src="./assets/demo/Prog_Edit_Screenshot.png" width = "600">
 
 <br />
 <br />
@@ -98,19 +96,11 @@ Demonstrate the app with a IndexedDB storage named 'jate' in the browser.
 
 ✅
 
-- Uses IndexedDB to create an object store and includes both GET and PUT methods
-- The application works without an internet connection
-- Automatically saves content inside the text editor when the DOM window is unfocused
-- Bundled with webpack
-- Create a service worker with workbox that Caches static assets
-- The application should use babel in order to use async / await
-- Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-- Can be installed as a Progressive Web Application
-
 ```
+
 when opening app in editor, user presented with client-server folder structure.
 
-commanding `npm run start` from root directory starts backend and serves client.
+commanding `npm run dev` from root directory starts backend and serves client.
 
 running app from terminal will bundle js files using webpack.
 
@@ -131,22 +121,12 @@ loaded web app will have registered service worker using workbox.
 after service worker registration, user has static assets pre-cached upon loading.
 
 deploying to heroku has proper build scripts for webpack.
+
 ```
-
-<br />
-<br />
-
-## Collaboration
-
-Development efforts included much deliberation with my fellow cohort:  
-**Olsen Ogouchi**
-
-<a href= "https://github.com/Chrisolsen1993"><img src=
-"https://avatars.githubusercontent.com/u/49103700?v=4" width="50px"/></a>
 
 <br />
 <br />
 <br />
 Let's build something!
-
 🛠️
+```
