@@ -24,7 +24,7 @@ export const putDb = async (content) => {
   const store = tx.objectStore("edits");
 
   // Pass in the content.
-  const request = store.add({ id: 1, value: content });
+  const request = store.put({ id: 1, value: content });
 
   // Confirmation of request.
   const result = await request;
@@ -38,7 +38,6 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   // Connects to the database and version we want to use.
   const editsDb = await openDB("edits", 1);
-
   // New transaction to specify the database and privileges.
   const tx = editsDb.transaction("edits", "readonly");
 
@@ -46,16 +45,16 @@ export const getDb = async () => {
   const store = tx.objectStore("edits");
 
   // Get all data in the database.
-  const request = store.getAll(1);
+  const request = store.get(1);
 
   // Confirmation of request
   const result = await request;
 
   result
     ? console.log("Data retrieved", result.value)
-    : console.error("getDb not implemented");
+    : console.log("No data found");
 
-  return result;
+  return result.value;
 };
 
 initdb();
