@@ -1,6 +1,6 @@
 # progress-edit
 
-<br />
+<img src="./client/src/images/logo.png" width = "250">
 
 ## Table of Contents
 
@@ -11,7 +11,6 @@
 - [License](#license)
 - [Demo](#demo)
 - [Criteria](#criteria)
-- [Collaboration](#collaboration)
 
 <br />
 <br />
